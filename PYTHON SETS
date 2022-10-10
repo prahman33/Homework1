@@ -1,0 +1,46 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n, m = map(int,input().split())
+a = list(map(int,input().split()))
+A = set(map(int,input().split()))
+B = set(map(int,input().split()))
+h = 0
+
+for x in a:
+    if x in A and x not in B:
+        h += 1
+    elif x in B and x not in A:
+        h -= 1
+    else:
+        pass
+print(h)
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+s = set({})
+n=int(input())
+for i in range(n):
+    el=input()
+    s.add(el)
+print(len(s))
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = int(input())
+A = set(list(map(int, input().split())))
+N = int(input())
+for i in range(N):
+    a = input().split()
+    set_b = set(list(map(int, input().split())))
+    if a[0] == 'intersection_update':
+        A.intersection_update(set_b)
+    elif a[0] == 'update':
+        A.update(set_b)
+    elif a[0] == 'symmetric_difference_update':
+        A.symmetric_difference_update(set_b)
+    elif a[0] == 'difference_update':
+        A.difference_update(set_b)
+
+print(sum(A))
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import Counter
+k,rooms=int(input()),Counter(list(map(int, input().rsplit())))
+[print(i) for i,j in rooms.items() if j==1]
