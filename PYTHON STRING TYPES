@@ -1,0 +1,58 @@
+def count_substring(string, sub_string):
+    # Implements a sliding window
+    sw = len(sub_string)
+    gen = enumerate(string[sw - 1:], start=sw)
+    count = sum([string[i - sw: i] == sub_string for i, _ in gen])
+    return count
+if __name__ == '__main__':
+    string = input().strip()
+    sub_string = input().strip()
+    
+    count = count_substring(string, sub_string)
+    print(count)
+    
+    #
+# Complete the 'print_full_name' function below.
+#
+# The function is expected to return a STRING.
+# The function accepts following parameters:
+#  1. STRING first
+#  2. STRING last
+#
+
+def print_full_name(first, last):
+    name_first = first.split()
+    name_second = last.split()
+    sentences = 'Hello ' + str(name_first[0]) + ' ' + str(name_second[0]) + '! You just delved into python.'
+    print(sentences)
+if __name__ == '__main__':
+    first_name = input()
+    last_name = input()
+    print_full_name(first_name, last_name)
+    
+    
+    import textwrap
+def wrap(string, max_width):
+    string = textwrap.wrap(string,max_width)
+    return '\n'.join(string)
+if __name__ == '__main__':
+    string, max_width = input(), int(input())
+    result = wrap(string, max_width)
+    print(result)
+    
+    def print_rangoli(size):
+    left=""
+    middle_char_ord=ord('a')+size-1
+    for i in range(1,size*2):
+        middle_string=left+chr(middle_char_ord)+left[::-1]
+        print(middle_string.center(size*4-3, '-'))
+        if i < size:
+            left=left+chr(middle_char_ord)+"-"
+            middle_char_ord -= 1
+        else:
+            left=left[:-2]
+            middle_char_ord += 1
+
+if __name__ == '__main__':
+    n = int(input())
+    print_rangoli(n)
