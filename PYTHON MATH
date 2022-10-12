@@ -1,0 +1,28 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def divMod(a,b):
+    f = divmod(a,b)
+    for e in f:
+        print(e)
+    print(f)
+if __name__ == '__main__' :
+    a = int(input())
+    b = int(input())
+    divMod(a,b)
+    
+    
+    # Enter your code here. Read input from STDIN. Print output to STDOUT
+a, b, m = list(map(int, [input(), input(), input()]))
+
+print(pow(a,b))
+print(pow(a,b,m))
+
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+a, b, c, d = int(input()), int(input()), int(input()), int(input())
+print(pow(a, b)+pow(c, d))
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import cmath
+res = cmath.polar(complex(input()))
+print(res[0])
+print(res[1])
