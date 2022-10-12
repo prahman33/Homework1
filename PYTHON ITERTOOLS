@@ -1,0 +1,30 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import permutations
+
+s, n = input().split()
+
+print(*sorted(''.join(i) for i in list(permutations(s, int(n) ))),sep='\n')
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import combinations
+a,b = input().rsplit()
+[print(''.join(i)) for b in range(1,int(b)+1) for i in list(combinations(sorted(a),int(b)))]
+
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import itertools
+s, n = input().split()
+s = [a for a in s]
+s.sort()
+a = itertools.combinations_with_replacement(s, int(n))
+for e in a:
+    print(''.join(e))
+    
+    
+ # Enter your code here. Read input from STDIN. Print output to STDOUT
+import itertools
+for key, iter_item in itertools.groupby(input()):
+    count = 0
+    for item in iter_item:
+        count += 1
+    print(f'({count}, {int(key)})', end=" ")
