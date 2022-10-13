@@ -1,0 +1,52 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import defaultdict 
+A = defaultdict(list)
+
+n, m = map(int, input().split())
+
+for i in range(1, n+1):
+    A[input()].append(i)
+    
+for i in range(m):
+    b = input()
+    
+    if b in A.keys():
+        print(*A[b])
+    else:
+        print(-1)
+        
+        
+ # Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import namedtuple
+n,Record=int(input()), namedtuple('Record', ','.join(input().split()))
+sum_marks=sum([int(Record(*(input().split())).MARKS) for _ in range(n) ])
+print(round(sum_marks/n, 2))
+
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import OrderedDict
+n = int(input())
+dictio = {}
+dictio = OrderedDict()
+for _ in range(n) :
+    cmd = list(map(str, input().split()))
+    a = int(cmd[-1])
+    ster = " ".join(cmd[0:-1])
+    if ster in dictio :
+        dictio[str(ster)] = int(a) + int(dict.__getitem__(dictio, ster))
+        continue
+    dictio[str(ster)] = int(a)
+
+for key, value in dictio.items() :
+    print(key, value)
+    
+    
+ # Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import Counter
+
+count = int(input())
+word_list = Counter( (input() for _ in range(count)) )
+
+
+print(len(word_list))        
+print(*word_list.values())
