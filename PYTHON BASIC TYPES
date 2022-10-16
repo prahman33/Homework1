@@ -37,3 +37,9 @@ if __name__ == '__main__':
     arr = map(int, input().split())
 arr = list(arr)
 print(max([i for i in arr if i!=max(arr)]))
+
+
+if __name__ == '__main__':
+    n = int(input())
+    integer_list = map(int, input().split())
+print(hash(tuple(integer_list)))
