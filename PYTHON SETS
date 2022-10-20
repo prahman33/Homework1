@@ -1,3 +1,4 @@
+#No Idea!
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 n, m = map(int,input().split())
 a = list(map(int,input().split()))
@@ -14,6 +15,9 @@ for x in a:
         pass
 print(h)
 
+
+
+#Set .add()
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 s = set({})
 n=int(input())
@@ -22,6 +26,10 @@ for i in range(n):
     s.add(el)
 print(len(s))
 
+
+
+
+#Set Mutations
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 n = int(input())
 A = set(list(map(int, input().split())))
@@ -40,6 +48,9 @@ for i in range(N):
 
 print(sum(A))
 
+
+
+#The Captain's Room
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 from collections import Counter
 k,rooms=int(input()),Counter(list(map(int, input().rsplit())))
