@@ -1,3 +1,4 @@
+#List Comprehensions
 if __name__ == '__main__':
     x = int(input())
     y = int(input())
@@ -6,12 +7,18 @@ if __name__ == '__main__':
     print([ [i, j, k] for i in range(x+1) for j in range(y+1) for k in range(z+1) if i+j+k!=n] )
 
 
+
+#Find the Runner-Up Score
 if __name__ == '__main__':
     n = int(input())
     arr = map(int, input().split())
 arr = list(arr)
 print(max([i for i in arr if i!=max(arr)]))
 
+
+
+
+#lists
 if __name__ == '__main__':
     N = int(input())
     arr = []
@@ -31,21 +38,30 @@ if __name__ == '__main__':
             arr.pop()
         elif command[0] == "reverse":
             arr.reverse()
-        
-if __name__ == '__main__':
-    n = int(input())
-    arr = map(int, input().split())
-arr = list(arr)
-print(max([i for i in arr if i!=max(arr)]))
+            
+            
+  #Nested lists          
+  if __name__ == '__main__':
+    records = []
+    names_of_second_lowest = []
+    scores = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        scores.append(score)
+        records.append([name, score])
+    sorted_scores = sorted(set(scores), reverse=True)
+    second_lowest_score = sorted_scores[-2]
+
+    for student in records:
+        if student[1] == second_lowest_score:
+            names_of_second_lowest.append(student[0])
+   
+    print(*sorted(names_of_second_lowest), sep="\n")
 
 
-if __name__ == '__main__':
-    n = int(input())
-    integer_list = map(int, input().split())
-print(hash(tuple(integer_list)))
 
-
-
+#Finding the percentage
 if __name__ == '__main__':
     n = int(input())
     student_marks = {}
