@@ -1,5 +1,5 @@
 
-#DefaultDict Tutorial
+1.#DefaultDict Tutorial
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 from collections import defaultdict 
 A = defaultdict(list)
@@ -19,7 +19,7 @@ for i in range(m):
 
 
 
-#Collections.namedtuple()        
+2.#Collections.namedtuple()        
  # Enter your code here. Read input from STDIN. Print output to STDOUT
 from collections import namedtuple
 n,Record=int(input()), namedtuple('Record', ','.join(input().split()))
@@ -29,7 +29,7 @@ print(round(sum_marks/n, 2))
 
 
 
-#Collections.OrderedDict()
+3.#Collections.OrderedDict()
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 from collections import OrderedDict
 n = int(input())
@@ -50,7 +50,7 @@ for key, value in dictio.items() :
  
  
  
- #Word order
+4. #Word order
  # Enter your code here. Read input from STDIN. Print output to STDOUT
 from collections import Counter
 
