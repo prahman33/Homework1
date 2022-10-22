@@ -1,4 +1,4 @@
-#Find a string
+1.#Find a string
 def count_substring(string, sub_string):
     # Implements a sliding window
     sw = len(sub_string)
@@ -12,7 +12,10 @@ if __name__ == '__main__':
     count = count_substring(string, sub_string)
     print(count)
     
-#What's Your Name?
+    
+    
+    
+2.#What's Your Name?
 # Complete the 'print_full_name' function below.
 #
 # The function is expected to return a STRING.
@@ -29,8 +32,12 @@ if __name__ == '__main__':
     first_name = input()
     last_name = input()
     print_full_name(first_name, last_name)
-    
-#Text Wrap 
+ 
+ 
+ 
+ 
+ 
+3.#Text Wrap 
 import textwrap
 def wrap(string, max_width):
     string = textwrap.wrap(string,max_width)
@@ -43,7 +50,7 @@ if __name__ == '__main__':
  
  
  
-#Alphabet Rangoli
+4.#Alphabet Rangoli
 def print_rangoli(size):
     left=""
     middle_char_ord=ord('a')+size-1
